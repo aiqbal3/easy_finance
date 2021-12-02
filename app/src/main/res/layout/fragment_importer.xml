@@ -50,7 +50,6 @@
         android:layout_marginTop="30dp"
         android:gravity="center_horizontal"
         android:text="History"
-        android:onClick="clickFunction1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/manualInput"

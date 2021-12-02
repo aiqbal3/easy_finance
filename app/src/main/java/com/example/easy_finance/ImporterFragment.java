@@ -24,9 +24,11 @@ public class ImporterFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_importer, container, false);
     }
 
+    //add onClick listener here?
+
     private void changeActivity() {
-        //Intent intent = new Intent(ImporterFragment.this.getActivity(), ScanReceipt.class);
-        //startActivity(intent);
+        Intent intent = new Intent(ImporterFragment.this.getActivity(), Scan.class);
+        startActivity(intent);
     }
 
 
