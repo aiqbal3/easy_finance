@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/benne/AndroidStudioProjects/easy-finance/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/benne/AndroidStudioProjects/easy-finance/app/src/main/res/layout/activity_scan_receipt.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/benne/AndroidStudioProjects/easy-finance/app/src/main/res/layout/activity_scan_receipt2.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/benne/AndroidStudioProjects/easy-finance/app/src/main/res/layout/fragment_importer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/danie/Documents/School/Comp_Sci_407/easy_finance/app/src/main/res/layout/fragment_budget.xml" value="0.490036231884058" />
         <entry key="..\:/Users/danie/Documents/School/Comp_Sci_407/easy_finance/app/src/main/res/layout/fragment_home.xml" value="0.490036231884058" />
         <entry key="..\:/Users/danie/Documents/School/Comp_Sci_407/easy_finance/app/src/main/res/menu/menu.xml" value="0.55" />
