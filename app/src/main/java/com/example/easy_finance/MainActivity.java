@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(bottomNavMethod);
     }
 
-    //Navigation bar view for 4 fragments
     private NavigationBarView.OnItemSelectedListener bottomNavMethod = new NavigationBarView.OnItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(MenuItem item) {
