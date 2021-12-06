@@ -26,11 +26,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //SharedPreferences for storing Cash, Investments, and Credit Cards values
-        //Net worth can be calcualted as: cash + investments - credit cards
+        //Net worth can be calculated as: cash + investments - credit cards
         SharedPreferences sharedPreferences = getSharedPreferences("com.example.easy_finance", Context.MODE_PRIVATE);
-        sharedPreferences.edit().putInt("cash", 6000);
-        sharedPreferences.edit().putInt("investments", 10235);
-        sharedPreferences.edit().putInt("creditCards", 1485);
+        sharedPreferences.edit().putInt("cash", 6000).apply();
+        sharedPreferences.edit().putInt("investments", 10235).apply();
+        sharedPreferences.edit().putInt("creditCards", 1485).apply();
 
         bottomNavigationView = findViewById(R.id.bottomNav);
         bottomNavigationView.setOnItemSelectedListener(bottomNavMethod);
