@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //SharedPreferences for storing Cash, Investments, and Credit Cards values
+        //Net worth can be calcualted as: cash + investments - credit cards
+        SharedPreferences sharedPreferences = getSharedPreferences("com.example.easy_finance", Context.MODE_PRIVATE);
+        sharedPreferences.edit().putInt("cash", 6000);
+        sharedPreferences.edit().putInt("investments", 10235);
+        sharedPreferences.edit().putInt("creditCards", 1485);
 
         bottomNavigationView = findViewById(R.id.bottomNav);
         bottomNavigationView.setOnItemSelectedListener(bottomNavMethod);
