@@ -97,7 +97,8 @@ public class InvestFragment extends Fragment {
                     public void onClick(DialogInterface dialog, int id) {
                         Fragment predictorFragment = new PredictorFragment();
                         FragmentManager manager = getParentFragmentManager();
-                        //use ID container to replace fragment
+                        //use ID 'container' to replace fragment
+                        //'predictorFragment' is the fragment you want to go to
                         manager.beginTransaction().replace(R.id.container, predictorFragment).commit();
                     }
                 });
