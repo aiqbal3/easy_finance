@@ -23,8 +23,31 @@ public class ImporterFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = (View)inflater.inflate(R.layout.fragment_importer, container, false);
 
-        Button button = (Button) view.findViewById(R.id.manualInput);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button button1 = (Button) view.findViewById(R.id.scanReceipt);
+        Button button2 = (Button) view.findViewById(R.id.importFromFile);
+        Button button3 = (Button) view.findViewById(R.id.manualInput);
+        Button button4 = (Button) view.findViewById(R.id.history);
+
+        //Function to send user to the ScanFragment
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment scanFragment = new ScanFragment();
+                FragmentManager manager = getParentFragmentManager();
+                manager.beginTransaction().replace(R.id.container, scanFragment).commit();
+            }
+        });
+        //Function to send user to the ImportFromFileFragment
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment importFromFileFragment = new ImportFromFileFragment();
+                FragmentManager manager = getParentFragmentManager();
+                manager.beginTransaction().replace(R.id.container, importFromFileFragment).commit();
+            }
+        });
+
+        button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment manualFragment = new ManualFragment();
@@ -33,14 +56,21 @@ public class ImporterFragment extends Fragment {
             }
         });
 
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment historyFragment = new HistoryFragment();
+                FragmentManager manager = getParentFragmentManager();
+                manager.beginTransaction().replace(R.id.container, historyFragment).commit();
+            }
+        });
+
+
+
         // Inflate the layout for this fragment
         return view;
     }
 
-    //@Override
-    public void onClick() {
-
-    }
 
 
 }

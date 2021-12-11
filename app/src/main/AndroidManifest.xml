@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Easy_finance">
         <activity
-            android:name=".Scan"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
