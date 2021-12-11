@@ -1,29 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Net Worth" />
 
     <TextView
+        android:id="@+id/netWorth"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Cash" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Net Worth:"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <TextView
+        android:id="@+id/cash"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Investments" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Cash:"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/netWorth"/>
 
     <TextView
+        android:id="@+id/investments"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Credit Cards" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Investments:"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cash"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/creditCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Credit Cards:"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/investments"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
