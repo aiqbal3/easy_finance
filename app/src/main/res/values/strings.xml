@@ -2,4 +2,12 @@
     <string name="app_name">easy_finance</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="funds">
+        <item>SWTSX - Schwab Total Stock Market Index</item>
+        <item>VTSAX - Vanguard Total Stock Market Index Fund</item>
+        <item>FZROX - Fidelity ZERO Total Market Index Fund</item>
+        <item>FSKAX - Fidelity Total Market Index Fund</item>
+        <item>VRTTX - Vanguard Russell 3000 Index Fund</item>
+    </string-array>
 </resources>
