@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("investments", 10235).apply();
         sharedPreferences.edit().putInt("creditCards", 1485).apply();
 
+        Fragment fragment = new HomeFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
+
         bottomNavigationView = findViewById(R.id.bottomNav);
         bottomNavigationView.setOnItemSelectedListener(bottomNavMethod);
     }
