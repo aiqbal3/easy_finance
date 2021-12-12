@@ -29,8 +29,8 @@ public class HomeFragment extends Fragment {
         int investments = sharedPreferences.getInt("investments", 0);
 
         TextView investment_home = (TextView) view.findViewById(R.id.invest_num);
-        // String investText = "$" + String.valueOf(investments);
-        investment_home.setText("Hello World");
+        String investText = "$" + String.valueOf(investments);
+        investment_home.setText(investText);
 
 
         // Inflate the layout for this fragment
