@@ -52,27 +52,6 @@ public class HomeFragment extends Fragment {
         String netWorthText = "$" + String.valueOf(net_worth);
         net_worth_home.setText(netWorthText);
 
-        if (investments < 0) {
-            investment_home.setTextColor(Color.RED);
-        } else {
-            investment_home.setTextColor(Color.GREEN);
-        }
-        if (creditCards < 0) {
-            credit_cards.setTextColor(Color.RED);
-        } else {
-            credit_cards.setTextColor(Color.GREEN);
-        }
-        if (cash < 0) {
-            cash_home.setTextColor(Color.RED);
-        } else {
-            cash_home.setTextColor(Color.GREEN);
-        }
-        if (net_worth < 0) {
-            net_worth_home.setTextColor(Color.RED);
-        } else {
-            net_worth_home.setTextColor(Color.GREEN);
-        }
-
         // Inflate the layout for this fragment
         return view;
     }

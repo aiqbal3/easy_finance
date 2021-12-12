@@ -12,97 +12,115 @@
         android:id="@+id/invest_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="28dp"
         android:fontFamily="serif-monospace"
         android:text="0"
         android:textColor="#4CAF50"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="214dp"
-        tools:layout_editor_absoluteY="226dp" />
+        app:layout_constraintBottom_toTopOf="@+id/creditCards"
+        app:layout_constraintStart_toEndOf="@+id/investments_home" />
 
     <TextView
         android:id="@+id/netWorth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:fontFamily="serif-monospace"
         android:text="Net Worth:"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="112dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/net_worth_bal"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/cash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:fontFamily="serif-monospace"
         android:text="Cash Balance:"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="167dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/cash_balance"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/investments_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:fontFamily="serif-monospace"
         android:text="Investments:"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="226dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/invest_num"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/creditCards"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:fontFamily="serif-monospace"
         android:text="Loan Balance:"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="283dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/credit_card_bal"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/net_worth_bal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="26dp"
         android:fontFamily="serif-monospace"
         android:text="0"
         android:textColor="#4CAF50"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="187dp"
-        tools:layout_editor_absoluteY="112dp" />
+        app:layout_constraintBottom_toTopOf="@+id/cash"
+        app:layout_constraintStart_toEndOf="@+id/netWorth" />
 
     <TextView
         android:id="@+id/cash_balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="30dp"
         android:fontFamily="serif-monospace"
         android:text="0"
         android:textColor="#4CAF50"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="230dp"
-        tools:layout_editor_absoluteY="167dp" />
+        app:layout_constraintBottom_toTopOf="@+id/invest_num"
+        app:layout_constraintStart_toEndOf="@+id/cash" />
 
     <TextView
         android:id="@+id/credit_card_bal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="283dp"
         android:fontFamily="serif-monospace"
         android:text="0"
         android:textColor="#F44336"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="230dp"
-        tools:layout_editor_absoluteY="283dp" />
+        app:layout_constraintStart_toEndOf="@+id/creditCards"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="260dp"
+        android:layout_width="300dp"
         android:layout_height="65dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="28dp"
         android:fontFamily="cursive"
         android:text="Easy Finance"
         android:textAlignment="center"
         android:textSize="48sp"
         android:textStyle="bold"
         android:typeface="normal"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="19dp" />
+        app:layout_constraintBottom_toTopOf="@+id/netWorth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
