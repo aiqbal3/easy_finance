@@ -1,5 +1,8 @@
 package com.example.easy_finance;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +10,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.google.gson.Gson;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +68,30 @@ public class HistoryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_history, container, false);
+        View view = (View) inflater.inflate(R.layout.fragment_history, container, false);
+
+        SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("com.example.easy_finance", Context.MODE_PRIVATE);
+        String jsonText = sharedPreferences.getString("history", "Hello World");
+
+        Gson gson = new Gson();
+        String[] text = gson.fromJson(jsonText, String[].class);
+
+        LinearLayout myLinearLayout = view.findViewById(R.id.linLayout2);
+
+        if (text.length != 0) {
+            for (int i = 0; i < text.length; i++) {
+                // create a new textview
+                final TextView rowTextView = new TextView(getContext());
+
+                // set some properties of rowTextView or something
+                rowTextView.setText(text[i]);
+
+                // add the textview to the linearlayout
+                myLinearLayout.addView(rowTextView);
+
+            }
+        }
+
+        return view;
     }
 }
