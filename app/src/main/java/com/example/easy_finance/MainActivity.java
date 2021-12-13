@@ -15,6 +15,10 @@ import android.widget.EditText;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.gson.Gson;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("cash", 6000).apply();
         sharedPreferences.edit().putInt("investments", 10235).apply();
         sharedPreferences.edit().putInt("creditCards", 1485).apply();
+
+        List<String> textList = new ArrayList<String>();
+
+        Gson gson = new Gson();
+        String jsonText = gson.toJson(textList);
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("history", jsonText);
+        editor.commit();
 
         Fragment fragment = new HomeFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();

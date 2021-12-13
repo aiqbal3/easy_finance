@@ -5,10 +5,13 @@
       <map>
         <entry key="..\:/Users/Andrew/AndroidStudioProjects/easy-finance/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Andrew/AndroidStudioProjects/easy-finance/app/src/main/res/layout/fragment_budget.xml" value="0.33" />
+        <entry key="..\:/Users/Andrew/AndroidStudioProjects/easy-finance/app/src/main/res/layout/fragment_history.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Andrew/AndroidStudioProjects/easy-finance/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Andrew/AndroidStudioProjects/easy-finance/app/src/main/res/layout/fragment_importer.xml" value="0.1" />
         <entry key="..\:/Users/Andrew/AndroidStudioProjects/easy-finance/app/src/main/res/layout/fragment_invest.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Andrew/AndroidStudioProjects/easy-finance/app/src/main/res/layout/fragment_predictor.xml" value="0.1585144927536232" />
+        <entry key="..\:/Users/Andrew/AndroidStudioProjects/easy-finance/app/src/main/res/layout/fragment_manual.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Andrew/AndroidStudioProjects/easy-finance/app/src/main/res/layout/fragment_predictor.xml" value="0.33" />
+        <entry key="..\:/Users/Andrew/AndroidStudioProjects/easy-finance/app/src/main/res/layout/fragment_scan.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/benne/AndroidStudioProjects/easy-finance/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/benne/AndroidStudioProjects/easy-finance/app/src/main/res/layout/activity_scan.xml" value="0.1265625" />
         <entry key="..\:/Users/benne/AndroidStudioProjects/easy-finance/app/src/main/res/layout/activity_scan_receipt.xml" value="0.13020833333333334" />

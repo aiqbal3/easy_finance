@@ -2,12 +2,15 @@ package com.example.easy_finance;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.gson.Gson;
 
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
@@ -23,11 +27,21 @@ import org.w3c.dom.Text;
 
 import android.widget.LinearLayout.LayoutParams;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
 public class BudgetFragment extends Fragment {
 
     View view;
     TextView tvHousing, tvFood, tvInsurance, tvPersonal, tvInvestments, tvMisc;
     PieChart pieChart;
+    SharedPreferences pref;
+    List<String> textList = new ArrayList<String>();
+    SharedPreferences sharedPreferences;
+
 
     //String housing, food, insurance, personal, investments, misc = "100";
 
@@ -48,6 +62,18 @@ public class BudgetFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_budget, container, false);
+
+        sharedPreferences = this.getActivity().getSharedPreferences("com.example.easy_finance", Context.MODE_PRIVATE);
+        Gson gson = new Gson();
+        String jsonText = sharedPreferences.getString("history", "Hello World");
+
+        String[] text = gson.fromJson(jsonText, String[].class);
+
+        if (text.length > 0) {
+            for (int i = 0; i < text.length; i++) {
+                textList.add(text[i]);
+            }
+        }
 
         BottomNavigationView navBar = getActivity().findViewById(R.id.bottomNav);
 
@@ -116,7 +142,19 @@ public class BudgetFragment extends Fragment {
                             builder.setCancelable(false);
                             builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
+                                    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                                    Date date = new Date();
+                                    String todayDate = formatter.format(date);
+
                                     String amount = edittext.getText().toString();
+                                    textList.add(todayDate + " | Category: " + category + " | Amount: $" + amount);
+
+                                    String jsonText2 = gson.toJson(textList);
+
+                                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                                    editor.putString("history", jsonText2);
+                                    editor.commit();
+
                                     switch (category) {
                                         case "Housing":
                                             housing = housing + Double.parseDouble(amount);
