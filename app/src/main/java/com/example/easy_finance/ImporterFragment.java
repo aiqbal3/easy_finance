@@ -39,9 +39,9 @@ public class ImporterFragment extends Fragment {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment importFromFileFragment = new GoalsFragment();
+                Fragment goalsFragment = new GoalsFragment();
                 FragmentManager manager = getParentFragmentManager();
-                manager.beginTransaction().replace(R.id.container, importFromFileFragment).commit();
+                manager.beginTransaction().replace(R.id.container, goalsFragment).commit();
             }
         });
 
