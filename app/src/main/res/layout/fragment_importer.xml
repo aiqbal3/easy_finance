@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:onClick="onClick"
-        android:text="Finacial Tips"
+        android:text="Financial Tips"
         app:layout_constraintEnd_toEndOf="@+id/history"
         app:layout_constraintStart_toStartOf="@+id/history"
         app:layout_constraintTop_toBottomOf="@+id/manualInput" />

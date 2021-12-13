@@ -27,10 +27,16 @@ public class HomeFragment extends Fragment {
         View view = (View)inflater.inflate(R.layout.fragment_home, container, false);
 
         SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("com.example.easy_finance", Context.MODE_PRIVATE);
+        String username = sharedPreferences.getString("username", "Hello World");
         int investments = sharedPreferences.getInt("investments", 0);
         int creditCards = sharedPreferences.getInt("creditCards", 0);
         int cash = sharedPreferences.getInt("cash", 0);
         int net_worth = investments + cash - creditCards;
+
+        // Net worth balance
+        TextView userEntry = (TextView) view.findViewById(R.id.user);
+        String user = "Welcome " + username + "!";
+        userEntry.setText(user);
 
         // Investment balance
         TextView investment_home = (TextView) view.findViewById(R.id.invest_num);
