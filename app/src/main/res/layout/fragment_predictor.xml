@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PredictorFragment"
-    android:background="@color/teal_200"
-    >
+    android:background="@color/teal_200">
 
     <TextView
         android:id="@+id/currInvestmentBalance"
@@ -49,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
+        android:buttonTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/balancePredictor">
 
@@ -57,6 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
+            android:buttonTint="@color/white"
             android:text="Index Fund"
             android:textSize="16sp" />
 
@@ -69,6 +70,7 @@
             android:id="@+id/custom_return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
             android:text="Custom Annual Return Rate"
             android:textSize="16sp" />
 
@@ -76,9 +78,9 @@
 
     <Spinner
         android:id="@+id/spinner1"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="204dp"
+        android:layout_marginStart="164dp"
         android:layout_marginTop="28dp"
         android:textColor="#3F51B5"
         android:textSize="16sp"
